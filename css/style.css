@@ -1,0 +1,298 @@
+
+/*  ------------------------------   */
+/*  ------- DEFAULT STYLES -------   */
+/*  ------------------------------   */
+.d-flex {
+   display: flex;
+}
+
+.align-l {
+   text-align: left
+}
+
+.align-c {
+   text-align: center
+}
+
+.align-r {
+   text-align: right
+}
+
+.col-12 {
+   width: 100%;
+}
+.col-9 {
+   width: 75%;
+}
+.col-8 {
+   width: 66.66%;
+}
+.col-6 {
+   width: 50%;
+}
+.col-4 {
+   width: 33.33%;
+}
+.col-3 {
+   width: 25%;
+}
+
+
+
+
+
+
+
+body {
+   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+
+
+/*  ------------------------------   */
+/*  ------ SITE HEAD STYLES ------   */
+/*  ------------------------------   */
+
+header {
+   width: 100%;
+   background-color: #24292e;
+   height: 60px;
+   padding: 12px 0;
+   box-sizing: border-box;
+}
+
+.header-container {
+   margin: 0 auto;
+   max-width: 1020px;
+   color: #ffffff;
+   justify-content: space-between;
+}
+
+.header-container .site-title a {
+   text-decoration: none;
+   color: #fff;
+}
+
+.header-container .site-logo span {
+   font-size: 32px;
+   line-height: 36px;
+   padding-right: 8px;
+}
+
+.header-container .site-name {
+   line-height: 36px;
+   font-size: 20px;
+}
+
+.header-container nav ul {
+   margin-right: -10px;
+}
+
+.header-container nav ul li {
+   padding: 0 2px;
+   line-height: 36px
+}
+
+.header-container nav ul a {
+   display: block;
+   line-height: 36px;
+   padding: 0 10px;
+   font-size: 16px;
+   text-decoration: none;
+   color: #ffffff;
+}
+
+.header-container nav ul a:hover {
+   color: #aaa;
+}
+
+/*  ------------------------------   */
+/*  ------ SITE BODY STYLES ------   */
+/*  ------------------------------   */
+
+main {
+   margin: 40px auto 60px;
+   max-width: 1020px;
+   box-sizing: border-box;
+}
+
+main aside {
+   padding-right: 16px; 
+}
+
+aside .profile-photo img {
+   width: 250px;
+   height: 250px;
+   border-radius: 6px;
+}
+
+aside .block {
+   padding: 14px 0 14px;
+   border-bottom: 1px solid #e1e4e8
+}
+aside .block:last-child {
+   border-bottom: none;
+}
+
+aside .block .block-title {
+   line-height: 38px;
+   font-size: 20px;
+   color: #333;
+}
+
+aside .block .list li {
+   padding: 3px 0;
+   font-size: 14px
+}
+
+aside .block .list .one-type,
+aside .block .list .one-skill {
+   line-height: 28px;
+   color: #555;
+}
+
+aside .block .list .type-icon {
+   font-size: 16px;
+   padding-right: 6px;
+}
+
+aside .block .skills-list .type-icon {
+   font-size: 14px
+}
+
+aside .block .list a {
+   text-decoration: none;
+   color: #555;
+}
+
+aside .block .list a:hover {
+   color: #999;
+}
+
+
+main article {
+   padding-left: 8px;
+}
+
+.article-title {
+   font-size: 28px;
+   line-height: 1.6;
+   font-weight: 600;
+}
+
+.article-title span {
+   color: #555;
+}
+
+.article-subtitle {
+   font-size: 24px;
+   line-height: 1.4;
+   font-weight: 600;
+   color: #555;
+}
+
+main article section {
+   margin: 20px 0;
+   padding: 0 0 24px;
+   border-bottom: 1px solid #e1e4e8;
+   font-size: 14px;
+   line-height: 1.4;
+   color: #555;
+}
+
+main article section:last-child {
+   border-bottom: none;
+}
+
+section .section-head {
+   padding: 14px 0 4px;
+}
+
+section .section-title {
+   font-size: 18px;
+   line-height: 28px;
+   color: #333;
+}
+
+section .section-body > p {
+   padding: 4px 0;
+}
+
+section .section-body .list .list-item {
+   padding: 8px 0;
+}
+
+section .section-body .list .card {
+   border: 1px solid #e1e4e8;
+   border-radius: 3px;
+   padding: 16px 16px 24px;
+}
+
+section .section-body .list .card .card-header .title {
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 1.8;
+}
+
+section .section-body .list .card .card-header .title .position {
+   color: #0366d6;
+}
+
+section .section-body .list .card .card-header .subtitle {
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 1.6;
+}
+
+section .section-body .list .card .card-body {
+   padding: 8px 0;
+}
+
+section .section-body .list .card .card-body p {
+   font-size: 14px;
+   line-height: 1.6;
+}
+
+
+/*  ------------------------------   */
+/*  ----- SITE FOTTER STYLES -----   */
+/*  ------------------------------   */
+
+footer {
+   width: 100%;
+}
+
+.footer-container {
+   margin: 0 auto;
+   max-width: 1020px;
+   border-top: 1px solid #e1e4e8;
+   padding-top: 16px;
+   padding-bottom: 24px;
+}
+
+footer .made-by {
+   color: #777;
+   font-size: 14px;
+   line-height: 34px;
+}
+
+footer .site-logo a {
+   font-size: 28px;
+   line-height: 34px;
+   color: #c6cbd1;
+   text-decoration: none;
+}
+
+footer .social-links ul {
+   justify-content: flex-end;
+}
+
+footer .social-links li {
+   padding-left: 12px; 
+}
+
+footer .social-links a {
+   color: #aaa;
+   text-decoration: none;
+   font-size: 20px;
+   line-height: 34px;
+}

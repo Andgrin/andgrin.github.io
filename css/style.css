@@ -6,6 +6,14 @@
    display: flex;
 }
 
+.p-relative {
+   position: relative;
+}
+
+.p-absolute {
+   position: absolute;
+}
+
 .align-l {
    text-align: left
 }
@@ -36,6 +44,40 @@
 .col-3 {
    width: 25%;
 }
+.col-2 {
+   width: 16.66%;
+}
+.col-1 {
+   width: 8.33%;
+}
+
+.pdng-1 {
+   padding: 0 15px;
+}
+
+
+
+
+@font-face {
+   font-family: 'SourceCodePro-Regular';
+   src:  url('../fonts/Source_Code_Pro/SourceCodePro-Regular.ttf');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceCodePro-Medium';
+   src:  url('../fonts/Source_Code_Pro/SourceCodePro-Medium.ttf');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceCodePro-Black';
+   src:  url('../fonts/Source_Code_Pro/SourceCodePro-Black.ttf');
+   font-weight: normal;
+   font-style: normal;
+}
 
 
 
@@ -44,8 +86,37 @@
 
 
 body {
-   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+   /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" */
+   font-family: 'SourceCodePro-Regular', monospace;
+	box-sizing: border-box;
 }
+
+body .background-form {
+   width: 100%;
+   height: 760px;
+   background-color: #9FF7B9;
+   z-index: 0; 
+}
+
+.body-container {
+	min-height: 100%;
+	overflow-y: hidden;
+}
+
+body .background-form.top {
+   top: 0;
+   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+}
+
+body .background-form.bottom {
+   bottom: -240px;
+   -webkit-clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%);
+   clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%);
+}
+
+
+
 
 
 /*  ------------------------------   */
@@ -54,16 +125,12 @@ body {
 
 header {
    width: 100%;
-   background-color: #24292e;
-   height: 60px;
-   padding: 12px 0;
-   box-sizing: border-box;
+   padding: 50px 0;
 }
 
 .header-container {
    margin: 0 auto;
-   max-width: 1020px;
-   color: #ffffff;
+   max-width: 1140px;
    justify-content: space-between;
 }
 
@@ -72,185 +139,143 @@ header {
    color: #fff;
 }
 
-.header-container .site-logo span {
+/* .header-container .site-logo span {
    font-size: 32px;
    line-height: 36px;
    padding-right: 8px;
-}
+} */
 
 .header-container .site-name {
-   line-height: 36px;
-   font-size: 20px;
+   font-size: 50px;
+   font-weight: 700;
+	text-align: center;
+	font-family: "SourceCodePro-Black";
 }
 
-.header-container nav ul {
-   margin-right: -10px;
-}
-
-.header-container nav ul li {
-   padding: 0 2px;
-   line-height: 36px
-}
-
-.header-container nav ul a {
+.header-container .contacts a {
    display: block;
-   line-height: 36px;
-   padding: 0 10px;
    font-size: 16px;
    text-decoration: none;
-   color: #ffffff;
+   color: #131313;
+   text-align: right;
 }
 
-.header-container nav ul a:hover {
-   color: #aaa;
+.header-container .contacts a:first-child {
+   margin-bottom: 18px;
 }
+
+.header-container .contacts a:hover {
+   color: #555;
+   text-decoration: underline;
+}
+
+
+
 
 /*  ------------------------------   */
 /*  ------ SITE BODY STYLES ------   */
 /*  ------------------------------   */
 
 main {
-   margin: 40px auto 60px;
-   max-width: 1020px;
-   box-sizing: border-box;
+   margin: 50px auto 100px;
+   max-width: 1140px;
 }
 
-main aside {
-   padding-right: 16px; 
+#mainInfo {
+   justify-content: space-between;
+   color: #131313;
 }
 
-aside .profile-photo img {
-   width: 250px;
-   height: 250px;
-   border-radius: 6px;
+#mainInfo .profile-photo img {
+   width: 160px;
+   height: 160px;
+   border-radius: 50%;
 }
 
-aside .block {
-   padding: 14px 0 14px;
-   border-bottom: 1px solid #e1e4e8
-}
-aside .block:last-child {
-   border-bottom: none;
+
+#mainInfo .profile-title .name {
+   font-size: 36px;
+   padding: 20px 0;
 }
 
-aside .block .block-title {
-   line-height: 38px;
-   font-size: 20px;
-   color: #333;
+#mainInfo .profile-title .name span {
+   color: #ffffff;
 }
 
-aside .block .list li {
-   padding: 3px 0;
-   font-size: 14px
-}
-
-aside .block .list .one-type,
-aside .block .list .one-skill {
-   line-height: 28px;
-   color: #555;
-}
-
-aside .block .list .type-icon {
+#mainInfo .profile-title .position,
+#mainInfo .profile-title .location {
    font-size: 16px;
-   padding-right: 6px;
+   line-height: 28px;
 }
 
-aside .block .skills-list .type-icon {
-   font-size: 14px
+#mainInfo .skills {
+   margin-top: 50px; 
 }
 
-aside .block .list a {
-   text-decoration: none;
-   color: #555;
-}
-
-aside .block .list a:hover {
-   color: #999;
+#mainInfo .skills p {
+   font-size: 16px;
+   line-height: 28px;
 }
 
 
-main article {
-   padding-left: 8px;
+section.with-title {
+   margin-top: 100px;
 }
 
-.article-title {
-   font-size: 28px;
-   line-height: 1.6;
-   font-weight: 600;
-}
-
-.article-title span {
-   color: #555;
-}
-
-.article-subtitle {
+section.with-title .section-title {
    font-size: 24px;
-   line-height: 1.4;
-   font-weight: 600;
-   color: #555;
+   color: #2BB755;
 }
 
-main article section {
-   margin: 20px 0;
-   padding: 0 0 24px;
-   border-bottom: 1px solid #e1e4e8;
-   font-size: 14px;
-   line-height: 1.4;
-   color: #555;
+section.with-title .list.d-flex {
+   justify-content: space-between;
 }
 
-main article section:last-child {
-   border-bottom: none;
+section.with-title .list .one-skill img {
+   display: block;
+   width: 66px;
+   height: 66px;
+   margin: 0 auto 16px; 
 }
 
-section .section-head {
-   padding: 14px 0 4px;
-}
-
-section .section-title {
-   font-size: 18px;
-   line-height: 28px;
-   color: #333;
-}
-
-section .section-body > p {
-   padding: 4px 0;
-}
-
-section .section-body .list .list-item {
-   padding: 8px 0;
-}
-
-section .section-body .list .card {
-   border: 1px solid #e1e4e8;
-   border-radius: 3px;
-   padding: 16px 16px 24px;
-}
-
-section .section-body .list .card .card-header .title {
+section.with-title .list .one-skill h4 {
    font-size: 16px;
-   font-weight: 600;
-   line-height: 1.8;
+   color: #131313;
+   text-align: center;
 }
 
-section .section-body .list .card .card-header .title .position {
-   color: #0366d6;
+
+section.with-title .job-card .company h4,
+section.with-title .education-card .degry {
+	font-family: "SourceCodePro-Black";
+   font-size: 24px;
+   color: #131313;
+   font-weight: 700;
+   margin-bottom: 20px
 }
 
-section .section-body .list .card .card-header .subtitle {
-   font-size: 14px;
-   font-weight: 600;
-   line-height: 1.6;
+section.with-title .job-card .time-period, 
+section.with-title .education-card .university, 
+section.with-title .education-card .years {
+	font-family: "SourceCodePro-Medium";
+   font-size: 24px;
+   color: #131313;  
+   margin-bottom: 20px
 }
 
-section .section-body .list .card .card-body {
-   padding: 8px 0;
+section.with-title .job-card .job-discription  {
+	font-family: "SourceCodePro-Regular";
+	font-size: 16px;
+	color: #131313;
+	line-height: 28px;
 }
 
-section .section-body .list .card .card-body p {
-   font-size: 14px;
-   line-height: 1.6;
-}
+
+
+
+
+
+
 
 
 /*  ------------------------------   */
@@ -258,14 +283,14 @@ section .section-body .list .card .card-body p {
 /*  ------------------------------   */
 
 footer {
-   width: 100%;
+	width: 100%;
+	height: 500px;
 }
 
 .footer-container {
    margin: 0 auto;
-   max-width: 1020px;
-   border-top: 1px solid #e1e4e8;
-   padding-top: 16px;
+   max-width: 1140px;
+   padding-top: 240px;
    padding-bottom: 24px;
 }
 
@@ -283,16 +308,38 @@ footer .site-logo a {
 }
 
 footer .social-links ul {
-   justify-content: flex-end;
+   justify-content: flex-start;
 }
 
 footer .social-links li {
-   padding-left: 12px; 
+   margin-right: 54px; 
 }
 
 footer .social-links a {
    color: #aaa;
    text-decoration: none;
    font-size: 20px;
-   line-height: 34px;
+   line-height: 70px;
+}
+
+footer .contact-links li:first-child {
+	margin-bottom: 22px;
+}
+
+footer .contact-links p, 
+footer .contact-links a {
+	font-family: "SourceCodePro-Medium";
+	font-size: 24px;
+	color: #131313;
+}
+
+footer .contact-links a:hover {
+	text-decoration: none;
+}
+
+footer .made-by {
+	margin-top: 120px;
+	font-family: "SourceCodePro-Medium";
+	font-size: 16px;
+	color: #131313;
 }

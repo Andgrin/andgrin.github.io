@@ -1,0 +1,40 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-css {
+  width: 0.8837890625em;
+}
+
+.icon-Git {
+  width: 1.1669921875em;
+}
+
+.icon-html {
+  width: 0.8837890625em;
+}
+
+.icon-jquery {
+  width: 1.0205078125em;
+}
+
+.icon-LinkedIn {
+  width: 1.0380859375em;
+}
+
+.icon-react {
+  width: 1.1376953125em;
+}

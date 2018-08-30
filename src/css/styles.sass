@@ -1,0 +1,725 @@
+
+// /*  ------------------------------   */
+// /*  ------- DEFAULT FONTS --------   */
+// /*  ------------------------------   */
+@font-face 
+   font-family: 'SourceCodePro-Regular'
+   src:  url('../fonts/Source_Code_Pro/SourceCodePro-Regular.ttf')
+   font-weight: normal
+   font-style: normal
+
+@font-face 
+	font-family: 'SourceCodePro-Medium'
+   src:  url('../fonts/Source_Code_Pro/SourceCodePro-Medium.ttf')
+   font-weight: normal
+   font-style: normal
+
+@font-face 
+	font-family: 'SourceCodePro-Black'
+   src:  url('../fonts/Source_Code_Pro/SourceCodePro-Black.ttf')
+   font-weight: normal
+   font-style: normal
+
+@font-face 
+	font-family: 'SourceCodePro-Bold'
+   src:  url('../fonts/Source_Code_Pro/SourceCodePro-Bold.ttf')
+   font-weight: normal
+   font-style: normal
+
+
+
+// /*  ------------------------------   */
+// /*  ------- DEFAULT STYLES -------   */
+// /*  ------------------------------   */
+
+.p-relative 
+   position: relative
+.p-absolute 
+   position: absolute
+.align-l 
+   text-align: left
+.align-c 
+   text-align: center
+.align-r 
+   text-align: right
+.pdng-1 
+   padding: 0 15px
+
+
+
+
+
+body
+   font-family: 'SourceCodePro-Regular', sans-serif
+   box-sizing: border-box
+   background-color: #9FF7B9
+   overflow-x: hidden
+   .background-form 
+      background-color: #9FF7B9
+      z-index: 0
+      // &.top 
+      //    top: 0
+      //    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+      //    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+      // &.bottom 
+      //    bottom: -240px
+      //    -webkit-clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+      //    clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+
+.body-container 
+	min-height: 100%
+	overflow-y: hidden
+	background-color: #fff
+
+
+
+// /*  ------------------------------   */
+// /*  ------ SITE HEAD STYLES ------   */
+// /*  ------------------------------   */
+
+header 
+   width: 100%
+
+.header-container
+   .site-title 
+      text-align: left
+      a 
+         text-decoration: none
+         color: #fff
+   .site-name
+      font-weight: 700
+      text-align: center
+      font-family: sans-serif
+      display: inline-block
+   .contacts 
+      font-family: sans-serif
+      a
+         display: block
+         font-size: 16px
+         text-decoration: none
+         color: #131313
+         text-align: right
+         &:first-child 
+            margin-bottom: 18px
+           
+
+
+
+
+// /*  ------------------------------   */
+// /*  ------ SITE BODY STYLES ------   */
+// /*  ------------------------------   */
+
+.main-section 
+   color: #131313
+   .profile-photo 
+      img 
+         border-radius: 50%
+   .profile-title 
+      .name 
+         font-family: sans-serif
+         color: #313131
+         span 
+            color: #ffffff
+      .position,
+      .location
+         font-family: sans-serif
+         font-size: 16px
+         line-height: 28px
+
+   .skills 
+      margin-top: 50px
+      p
+         font-family: sans-serif
+
+.secondary-section
+   .section-title
+      color: #2BB755
+      font-family: sans-serif
+   .list
+      .one-skill 
+         .icon
+            display: block
+         h4 
+            color: #131313
+            text-align: center
+            font-family: sans-serif
+   .job-card 
+      .company 
+         h4
+            font-family: "SourceCodePro-Bold"
+            font-family: sans-serif
+            color: #131313
+      .time-period
+         font-family: "SourceCodePro-Medium"
+         font-family: sans-serif
+         color: #131313  
+         h5
+            font-family: sans-serif
+      .job-discription
+         font-family: "SourceCodePro-Regular"
+         font-family: sans-serif
+         color: #131313
+         p
+            font-family: sans-serif
+
+   .education-card 
+      .degry,
+      .university, 
+      .years
+         font-family: "SourceCodePro-Medium"
+         font-family: sans-serif
+         color: #131313  
+
+
+
+
+
+// /*  ------------------------------   */
+// /*  ----- SITE FOTTER STYLES -----   */
+// /*  ------------------------------   */
+
+footer 
+   width: 100%
+   .social-links 
+      ul 
+         display: table
+         li 
+            display: table-cell
+            vertical-align: bottom
+            a 
+               color: #333
+               text-decoration: none
+               &:hover 
+                  opacity: .6
+
+   .contact-links 
+      p, 
+      a 
+         font-family: "SourceCodePro-Medium"
+         font-family: sans-serif
+         color: #131313
+      a:hover 
+         text-decoration: none
+         color: #777
+   .made-by 
+      font-family: "SourceCodePro-Medium"
+      font-family: sans-serif
+      // font-size: 16px
+      color: #131313
+      line-height: 34px
+
+.footer-container 
+   margin: 0 auto
+   padding-bottom: 24px
+
+
+
+
+
+@media screen and (max-width: 767px)
+   // ------ small screen ------
+   .sm-col-12 
+      width: 100%
+   .sm-col-9 
+      width: 75%
+   .sm-col-8 
+      width: 66.66%
+   .sm-col-6 
+      width: 50%
+   .sm-col-4 
+      width: 33.33%
+   .sm-col-3 
+      width: 25%
+   .sm-col-2 
+      width: 16.66%
+   .sm-col-1 
+      width: 8.33%
+
+   .sm_d-flex 
+      display: flex
+      .sm_jc-sb
+         justify-content: space-between
+
+   body
+      .background-form  
+         width: 100%
+         height: 330px
+         &.top 
+            top: 0
+         &.bottom 
+            bottom: -160px
+      .body-container
+         min-width: 320px
+
+   header 
+      display: none
+   
+   main 
+      margin: 60px auto
+   
+   .main-section 
+      .profile-photo 
+         text-align: center
+         margin-bottom: 30px
+         img 
+            width: 140px
+            height: 140px
+
+      .profile-title 
+         text-align: center
+         .name
+            font-size: 20px
+            padding-bottom: 14px
+      .skills 
+         margin-top: 40px
+         line-height: 20px
+         p
+            font-size: 13px
+            text-align: justify
+
+   .secondary-section
+      margin-top: 40px
+      .section-title
+         font-size: 18px
+         margin-bottom: 20px
+      .list
+         display: flex
+         flex-wrap: wrap
+         .list-item
+            flex: 1
+            min-width: 100px
+            margin-bottom: 14px
+         .one-skill 
+            .icon
+               font-size: 40px
+               margin: 0 auto 16px
+            h4 
+               font-size: 14px
+
+      .job-card 
+         .company 
+            h4
+               font-size: 16px
+               margin-bottom: 10px
+         .time-period
+            font-size: 16px
+            margin-bottom: 10px
+         .job-discription
+            font-size: 13px
+            line-height: 20px
+      .education-card 
+         .degry,
+         .university, 
+         .years
+            font-size: 16px
+            margin-bottom: 10px
+
+   footer 
+      height: 150px
+      padding: 0 20px
+      box-sizing: border-box
+      .social-links 
+         ul 
+            li
+               padding-right: 20px
+               a 
+                  font-size: 30px
+                  line-height: 50px
+      .contact-links 
+         li:first-child 
+            margin-bottom: 20px
+         p, 
+         a 
+            font-size: 14px
+      .made-by 
+         font-size: 12px
+         margin-top: 30px
+         text-align: center
+      
+   .footer-container 
+      padding-bottom: 10px
+      // padding-top: 150px      
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 979px)
+   // ------ medium screen ------
+   .md-col-12 
+      width: 100%
+   .md-col-9 
+      width: 75%
+   .md-col-8 
+      width: 66.66%
+   .md-col-6 
+      width: 50%
+   .md-col-4 
+      width: 33.33%
+   .md-col-3 
+      width: 25%
+   .md-col-2 
+      width: 16.66%
+   .md-col-1 
+      width: 8.33%
+
+   .md_d-flex 
+      display: flex
+      .md_jc-sb
+         justify-content: space-between
+         
+   body
+      min-width: 320px
+      .background-form  
+         width: 100%
+         height: 540px
+         &.top 
+            top: 0
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+         &.bottom 
+            bottom: -240px
+            -webkit-clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+            clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+
+   header 
+      padding: 20px
+      box-sizing: border-box
+
+   .header-container 
+      justify-content: space-between
+      width: 100%
+      padding: 0 20px
+      box-sizing: border-box
+      .site-name 
+         font-size: 36px
+         line-height: 50px
+   
+   main 
+      margin: 30px auto 40px
+      padding: 0 20px
+
+   .main-section 
+      .profile-photo 
+         img 
+            width: 160px
+            height: 160px
+      .profile-title 
+         .name
+            font-size: 30px
+            padding-bottom: 14px
+      .skills 
+         margin-top: 20px
+         line-height: 24px
+         p
+            font-size: 14px
+
+   .secondary-section
+      margin-top: 60px
+      .section-title
+         font-size: 18px
+      .list
+         // .list-item
+            // flex: 1
+         .one-skill 
+            .icon
+               font-size: 40px
+               margin: 0 auto 16px
+            h4 
+               font-size: 14px
+
+      .job-card 
+         .company 
+            h4
+               font-size: 18px
+               margin-bottom: 14px
+         .time-period
+            font-size: 18px
+            margin-bottom: 10px
+         .job-discription
+            font-size: 14px
+            line-height: 20px
+      .education-card 
+         .degry,
+         .university, 
+         .years
+            font-size: 18px
+            margin-bottom: 14px
+
+   footer 
+      height: 300px
+      padding: 0 20px
+      box-sizing: border-box
+      .social-links 
+         ul 
+            li
+               padding-right: 32px
+               a 
+                  font-size: 34px
+                  line-height: 58px
+      .contact-links 
+         li:first-child 
+            margin-bottom: 30px
+         p, 
+         a 
+            font-size: 14px
+      .made-by 
+         font-size: 12px
+         margin-top: 40px
+         text-align: center
+      
+   .footer-container 
+      padding-top: 150px
+
+
+
+
+
+@media screen and (min-width: 980px) and (max-width: 1199px)
+   // ------ large screen ------
+   .lg-col-12 
+      width: 100%
+   .lg-col-9 
+      width: 75%
+   .lg-col-8 
+      width: 66.66%
+   .lg-col-6 
+      width: 50%
+   .lg-col-4 
+      width: 33.33%
+   .lg-col-3 
+      width: 25%
+   .lg-col-2 
+      width: 16.66%
+   .lg-col-1 
+      width: 8.33%
+
+   .lg_d-flex 
+      display: flex
+      .lg_jc-sb
+         justify-content: space-between
+
+   body
+     .background-form  
+         width: 100%
+         height: 640px
+         &.top 
+            top: 0
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+         &.bottom 
+            bottom: -240px
+            -webkit-clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+            clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+
+   header 
+      padding: 30px 0
+
+   .header-container 
+      width: 100%
+      justify-content: space-between
+      padding: 0 20px
+      box-sizing: border-box
+      .site-name 
+         font-size: 50px
+
+   main 
+      margin: 40px auto 60px
+      padding: 0 20px
+
+   .main-section 
+      .profile-photo 
+         img 
+            width: 160px
+            height: 160px
+      .profile-title 
+         .name
+            font-size: 36px
+            padding-bottom: 24px
+      .skills 
+         margin-top: 34px
+         line-height: 28px
+         p
+            font-size: 16px
+
+   .secondary-section
+      margin-top: 80px
+      .section-title
+         font-size: 24px
+      .list
+         .one-skill 
+            .icon
+               font-size: 60px
+               margin: 0 auto 16px
+            h4 
+               font-size: 16px
+      .job-card 
+         .company 
+            h4
+               font-size: 24px
+               margin-bottom: 28px
+         .time-period
+            font-size: 24px
+            margin-bottom: 26px
+         .job-discription
+            font-size: 16px
+            line-height: 28px
+      .education-card 
+         .degry,
+         .university, 
+         .years
+            font-size: 24px
+            margin-bottom: 20px
+
+   footer 
+      height: 400px
+      padding: 0 20px
+      box-sizing: border-box
+      .social-links 
+         ul 
+            li
+               padding-right: 32px
+               a 
+                  font-size: 40px
+                  line-height: 80px
+      .contact-links 
+         li:first-child 
+            margin-bottom: 30px
+         p, 
+         a 
+            font-size: 20px
+      .made-by 
+         font-size: 16px
+         margin-top: 40px
+      
+   .footer-container 
+      padding-top: 200px
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px) 
+   // ------ x-large screen ------
+   .xl-col-12 
+      width: 100%
+   .xl-col-9 
+      width: 75%
+   .xl-col-8 
+      width: 66.66%
+   .xl-col-6 
+      width: 50%
+   .xl-col-4 
+      width: 33.33%
+   .xl-col-3 
+      width: 25%
+   .xl-col-2 
+      width: 16.66%
+   .xl-col-1 
+      width: 8.33%
+
+   .xl_d-flex 
+      display: flex
+      .xl_jc-sb
+         justify-content: space-between
+
+   body 
+      .background-form 
+         width: 100%
+         height: 760px
+         &.top 
+            top: 0
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+         &.bottom 
+            bottom: -240px
+            -webkit-clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+            clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+
+   header 
+      padding: 50px 0
+
+   .header-container 
+      margin: 0 auto
+      max-width: 1140px
+      justify-content: space-between 
+      .site-name 
+         font-size: 50px
+  
+   main 
+      margin: 50px auto 100px
+      max-width: 1140px
+
+   .main-section 
+      .profile-photo 
+         img 
+            width: 160px
+            height: 160px
+      .profile-title 
+         .name
+            font-size: 36px
+            padding: 24px 0
+      .skills 
+         margin-top: 50px
+         line-height: 28px
+         p
+            font-size: 16px
+
+   .secondary-section
+      margin-top: 100px
+      .section-title
+         font-size: 24px
+      .list
+         .one-skill 
+            .icon
+               font-size: 60px
+               margin: 0 auto 16px
+            h4 
+               font-size: 16px
+      .job-card 
+         .company 
+            h4
+               font-size: 24px
+               margin-bottom: 28px
+         .time-period
+            font-size: 24px
+            margin-bottom: 26px
+         .job-discription
+            font-size: 16px
+            line-height: 28px
+      .education-card 
+         .degry,
+         .university, 
+         .years
+            font-size: 24px
+            margin-bottom: 20px
+
+   footer 
+      height: 500px
+      .social-links 
+         ul 
+            li
+               padding-right: 40px
+               a 
+                  font-size: 50px
+                  line-height: 96px
+      .contact-links 
+         li:first-child 
+            margin-bottom: 30px
+         p, 
+         a 
+            font-size: 24px
+      .made-by 
+         font-size: 16px
+         margin-top: 80px
+
+   .footer-container 
+      max-width: 1140px
+      padding-top: 240px
+
+

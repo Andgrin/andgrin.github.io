@@ -1,3 +1,4 @@
+@import './reset.sass'
 
 // /*  ------------------------------   */
 // /*  ------- DEFAULT FONTS --------   */
@@ -26,6 +27,18 @@
    font-weight: normal
    font-style: normal
 
+$ff-scp-reg: 'SourceCodePro-Regular', monospace
+$ff-scp-med: 'SourceCodePro-Medium', monospace
+$ff-scp-blk: 'SourceCodePro-Black', monospace
+$ff-scp-bold: 'SourceCodePro-Bold', monospace
+
+$polygon-top: 0 0, 100% 0, 100% 100%, 0 76%
+$polygon-bottom: 0% 0%, 100% 24%, 100% 100%, 0% 100%
+
+@mixin body-back-polygon($poligon)
+   -webkit-clip-path: polygon($poligon)
+   clip-path: polygon($poligon)
+
 
 
 // /*  ------------------------------   */
@@ -50,21 +63,13 @@
 
 
 body
-   font-family: 'SourceCodePro-Regular', monospace
+   font-family: $ff-scp-reg
    box-sizing: border-box
    background-color: #9FF7B9
    overflow-x: hidden
    .background-form 
       background-color: #9FF7B9
       z-index: 0
-      // &.top 
-      //    top: 0
-      //    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
-      //    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
-      // &.bottom 
-      //    bottom: -240px
-      //    -webkit-clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
-      //    clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
 
 .body-container 
 	min-height: 100%
@@ -87,7 +92,7 @@ header
 			text-decoration: none
 			color: #fff
 	.site-name
-		font-family: 'SourceCodePro-Bold'
+		font-family: $ff-scp-bold
 		text-align: center
 		display: inline-block
 	.contacts 
@@ -139,20 +144,20 @@ header
    .job-card 
       .company 
          h4
-            font-family: "SourceCodePro-Bold"
+            font-family: $ff-scp-bold
             color: #131313
       .time-period
-         font-family: "SourceCodePro-Medium"
+         font-family: $ff-scp-med
          color: #131313  
       .job-discription
-         font-family: "SourceCodePro-Regular"
+         font-family: $ff-scp-reg
          color: #131313
 
    .education-card 
       .degry,
       .university, 
       .years
-         font-family: "SourceCodePro-Medium"
+         font-family: $ff-scp-med
          color: #131313  
 
 
@@ -180,14 +185,13 @@ footer
    .contact-links 
       p, 
       a 
-         font-family: "SourceCodePro-Medium"
+         font-family: $ff-scp-med
          color: #131313
       a:hover 
          text-decoration: none
          color: #777
    .made-by 
-      font-family: "SourceCodePro-Medium"
-      // font-size: 16px
+      font-family: $ff-scp-med
       color: #131313
       line-height: 34px
 
@@ -320,8 +324,7 @@ footer
          text-align: center
       
    .footer-container 
-      padding-bottom: 10px
-      // padding-top: 150px      
+      padding-bottom: 10px  
 
 
 
@@ -358,12 +361,10 @@ footer
          height: 540px
          &.top 
             top: 0
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+            @include body-back-polygon($polygon-top)
          &.bottom 
             bottom: -240px
-            -webkit-clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
-            clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+            @include body-back-polygon($polygon-bottom)
 
    header 
       padding: 20px
@@ -488,12 +489,10 @@ footer
          height: 640px
          &.top 
             top: 0
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+            @include body-back-polygon($polygon-top)
          &.bottom 
             bottom: -240px
-            -webkit-clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
-            clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+            @include body-back-polygon($polygon-bottom)
 
    header 
       padding: 30px 0
@@ -616,12 +615,10 @@ footer
          height: 760px
          &.top 
             top: 0
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%)
+            @include body-back-polygon($polygon-top)
          &.bottom 
             bottom: -240px
-            -webkit-clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
-            clip-path: polygon(0% 0%, 100% 24%, 100% 100%, 0% 100%)
+            @include body-back-polygon($polygon-bottom)
 
    header 
       padding: 50px 0
